@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Al-Miftah School | Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-left">
+      <a href="mailto:info@almiftah.ac"><i class="fas fa-envelope"></i> info@almiftah.ac</a>
+      <a href="tel:+255000000000"><i class="fas fa-phone"></i> +255 000 000 000</a>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="topbar-link">Parent Portal</a>
+      <a href="#" class="topbar-link">Staff Login</a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.jpeg" alt="Al-Miftah School" class="logo-img" />
+      <div class="logo-text">
+        <span class="logo-name">Al-Miftah School</span>
+        <span class="logo-tagline">Nursery, Primary &amp; Secondary School</span>
+      </div>
+    </a>
+    <nav class="nav" id="nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li class="has-dropdown">
+          <a href="about.html" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="about.html#story">Our Story</a></li>
+            <li><a href="about.html#vision">Vision &amp; Mission</a></li>
+            <li><a href="about.html#leadership">Leadership</a></li>
+            <li><a href="about.html#accreditations">Accreditations</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="schools.html" class="nav-link">Our Schools <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="schools.html#early-years">Early Years</a></li>
+            <li><a href="schools.html#primary">Primary School</a></li>
+            <li><a href="schools.html#secondary">Secondary School</a></li>
+            <li><a href="schools.html#sixth-form">Sixth Form</a></li>
+          </ul>
+        </li>
+        <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+        <li><a href="news.html" class="nav-link">News &amp; Events</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="admissions.html" class="btn btn-primary nav-cta">Apply Now</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=1920&q=80')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&q=80')"></div>
+    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1532094349884-543559059013?w=1920&q=80')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-content">
+    <span class="hero-badge">Welcome to Al-Miftah School</span>
+    <h1 class="hero-title">Nurturing Young Minds,<br><span class="hero-highlight">Shaping Tomorrow's Leaders</span></h1>
+    <p class="hero-subtitle">A world-class learning environment for students from Nursery through Sixth Form, empowering every learner to reach their full potential.</p>
+    <div class="hero-actions">
+      <a href="admissions.html" class="btn btn-primary btn-lg">Apply Now</a>
+      <a href="about.html" class="btn btn-outline-white btn-lg">Discover Our School</a>
+      <a href="contact.html" class="btn btn-secondary btn-lg">Book a Visit</a>
+    </div>
+  </div>
+
+  <div class="hero-nav">
+    <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+    <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+    <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+  </div>
+  <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+  <button class="hero-arrow hero-next" id="heroNext" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+</section>
+
+<!-- QUICK ACTIONS -->
+<section class="quick-actions">
+  <div class="container">
+    <div class="quick-actions-grid">
+      <a href="admissions.html" class="quick-action">
+        <i class="fas fa-file-alt"></i>
+        <div><strong>Apply Online</strong><span>Start your application today</span></div>
+      </a>
+      <a href="contact.html" class="quick-action">
+        <i class="fas fa-map-marker-alt"></i>
+        <div><strong>Book a Visit</strong><span>Come see our campus</span></div>
+      </a>
+      <a href="news.html" class="quick-action">
+        <i class="fas fa-calendar-alt"></i>
+        <div><strong>Term Dates</strong><span>2025/2026 Academic Year</span></div>
+      </a>
+      <a href="#" class="quick-action">
+        <i class="fas fa-users"></i>
+        <div><strong>Parent Portal</strong><span>Access school resources</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat-item">
+      <span class="stat-number" data-target="1200">0</span><span class="stat-plus">+</span>
+      <span class="stat-label">Students Enrolled</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="25">0</span><span class="stat-plus">+</span>
+      <span class="stat-label">Years of Excellence</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="120">0</span><span class="stat-plus">+</span>
+      <span class="stat-label">Qualified Teachers</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" data-target="30">0</span><span class="stat-plus">+</span>
+      <span class="stat-label">Nationalities</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT PREVIEW -->
+<section class="section">
+  <div class="container about-grid">
+    <div class="about-image">
+      <div class="about-img-main img-placeholder">
+        <i class="fas fa-school"></i>
+        <span>Al-Miftah Campus</span>
+      </div>
+      <div class="about-img-badge">
+        <i class="fas fa-award"></i>
+        <div><strong>Internationally</strong><span>Accredited School</span></div>
+      </div>
+    </div>
+    <div class="about-content">
+      <span class="section-badge">About Al-Miftah School</span>
+      <h2 class="section-title">A Community Built on Excellence &amp; Values</h2>
+      <p class="about-lead">Al-Miftah School is a co-educational institution serving students from Nursery through Sixth Form, offering a rigorous and internationally recognised curriculum in a nurturing and inclusive environment.</p>
+      <p>Our dedicated educators inspire curiosity, critical thinking, and a love of learning. We believe every child has unique potential — and our role is to help them discover and develop it within a community rooted in respect, integrity, and ambition.</p>
+      <div class="about-features">
+        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Cambridge International Curriculum</span></div>
+        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Small class sizes for personalised learning</span></div>
+        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Modern facilities &amp; technology-rich classrooms</span></div>
+        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Vibrant co-curricular &amp; sports programmes</span></div>
+      </div>
+      <div class="about-actions">
+        <a href="about.html" class="btn btn-primary">Read Our Story</a>
+        <a href="about.html#leadership" class="btn btn-outline">Meet the Leadership</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHOOLS PREVIEW -->
+<section class="section schools-bg">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Our Four Schools</span>
+      <h2 class="section-title">A School for Every Stage of Learning</h2>
+      <p class="section-subtitle">From a child's very first day to university preparation, Al-Miftah provides an outstanding educational journey at every stage.</p>
+    </div>
+    <div class="schools-grid">
+      <div class="school-card" data-color="early">
+        <div class="school-card-top">
+          <div class="school-icon"><i class="fas fa-child"></i></div>
+          <div class="school-age">Ages 3 – 5</div>
+        </div>
+        <h3 class="school-name">Early Years / Nursery</h3>
+        <p class="school-desc">A warm, stimulating environment where our youngest learners explore, discover, and build the foundations for lifelong learning through play-based inquiry.</p>
+        <ul class="school-features">
+          <li><i class="fas fa-circle"></i> EYFS Framework</li>
+          <li><i class="fas fa-circle"></i> Play-based learning</li>
+          <li><i class="fas fa-circle"></i> Creative arts &amp; outdoor play</li>
+        </ul>
+        <a href="schools.html#early-years" class="school-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="school-card" data-color="primary">
+        <div class="school-card-top">
+          <div class="school-icon"><i class="fas fa-book-open"></i></div>
+          <div class="school-age">Ages 6 – 11</div>
+        </div>
+        <h3 class="school-name">Primary School</h3>
+        <p class="school-desc">Building confident, curious learners through an internationally benchmarked curriculum that balances academic rigour with creativity and collaboration.</p>
+        <ul class="school-features">
+          <li><i class="fas fa-circle"></i> Cambridge Primary</li>
+          <li><i class="fas fa-circle"></i> STEM &amp; Digital Literacy</li>
+          <li><i class="fas fa-circle"></i> Sports &amp; performing arts</li>
+        </ul>
+        <a href="schools.html#primary" class="school-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="school-card" data-color="secondary">
+        <div class="school-card-top">
+          <div class="school-icon"><i class="fas fa-microscope"></i></div>
+          <div class="school-age">Ages 12 – 16</div>
+        </div>
+        <h3 class="school-name">Secondary School</h3>
+        <p class="school-desc">Developing independent thinkers through the Cambridge IGCSE programme, preparing students for global opportunities and further study.</p>
+        <ul class="school-features">
+          <li><i class="fas fa-circle"></i> Cambridge IGCSE</li>
+          <li><i class="fas fa-circle"></i> Wide subject choice</li>
+          <li><i class="fas fa-circle"></i> University guidance</li>
+        </ul>
+        <a href="schools.html#secondary" class="school-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="school-card" data-color="sixth">
+        <div class="school-card-top">
+          <div class="school-icon"><i class="fas fa-university"></i></div>
+          <div class="school-age">Ages 17 – 18</div>
+        </div>
+        <h3 class="school-name">Sixth Form</h3>
+        <p class="school-desc">The gateway to top universities. Our Sixth Form offers A-Level and BTEC programmes with comprehensive UCAS support.</p>
+        <ul class="school-features">
+          <li><i class="fas fa-circle"></i> A-Level &amp; BTEC</li>
+          <li><i class="fas fa-circle"></i> UCAS counselling</li>
+          <li><i class="fas fa-circle"></i> Research &amp; EPQ projects</li>
+        </ul>
+        <a href="schools.html#sixth-form" class="school-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Why Al-Miftah</span>
+      <h2 class="section-title">An Education That Goes Beyond the Classroom</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-globe"></i></div>
+        <h3>International Curriculum</h3>
+        <p>Cambridge International qualifications recognised and respected by leading universities worldwide.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-flask"></i></div>
+        <h3>World-Class Facilities</h3>
+        <p>Fully equipped science labs, digital learning hubs, a library, sports complex, and creative arts studios.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-heart"></i></div>
+        <h3>Pastoral Care</h3>
+        <p>Every student is known and valued. Our dedicated pastoral team ensures wellbeing at every level.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-trophy"></i></div>
+        <h3>Co-Curricular Excellence</h3>
+        <p>Over 40 clubs and activities — from robotics to football, drama to debate — enriching every student's journey.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-hands-helping"></i></div>
+        <h3>Inclusive Community</h3>
+        <p>A welcoming, multicultural community where every family feels at home from the very first day.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Outstanding Results</h3>
+        <p>Consistently high pass rates and university placements at top institutions across Africa and beyond.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS PREVIEW -->
+<section class="section" style="background:var(--gray-100)">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Latest News</span>
+      <h2 class="section-title">News &amp; Upcoming Events</h2>
+      <p class="section-subtitle">Stay connected with everything happening across our school community.</p>
+    </div>
+    <div class="news-layout">
+      <div class="news-main">
+        <div class="news-card featured">
+          <div class="news-img img-placeholder"><i class="fas fa-newspaper"></i><span>News Image</span></div>
+          <div class="news-body">
+            <span class="news-tag">Achievement</span>
+            <h3>Al-Miftah Students Excel in Cambridge IGCSE Examinations</h3>
+            <p>We are proud to announce outstanding results across all subject areas, with 85% of students achieving A*–C grades — our best results in school history.</p>
+            <div class="news-meta">
+              <span><i class="fas fa-calendar"></i> June 10, 2026</span>
+              <a href="news.html" class="news-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="news-row">
+          <div class="news-card small">
+            <div class="news-img-sm img-placeholder"><i class="fas fa-futbol"></i></div>
+            <div class="news-body-sm">
+              <span class="news-tag">Sports</span>
+              <h4>Inter-School Football Championship Victory</h4>
+              <span class="news-date"><i class="fas fa-calendar"></i> May 28, 2026</span>
+            </div>
+          </div>
+          <div class="news-card small">
+            <div class="news-img-sm img-placeholder"><i class="fas fa-paint-brush"></i></div>
+            <div class="news-body-sm">
+              <span class="news-tag">Arts</span>
+              <h4>Annual Art Exhibition Opens to the Community</h4>
+              <span class="news-date"><i class="fas fa-calendar"></i> May 20, 2026</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:24px;text-align:center">
+          <a href="news.html" class="btn btn-outline">View All News &amp; Events <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="events-sidebar">
+        <h3 class="sidebar-title"><i class="fas fa-calendar-alt"></i> Upcoming Events</h3>
+        <div class="event-list">
+          <div class="event-item">
+            <div class="event-date"><span class="event-day">20</span><span class="event-month">Jun</span></div>
+            <div class="event-info"><strong>Open Day – All Sections</strong><span>9:00 AM – 1:00 PM · Main Campus</span></div>
+          </div>
+          <div class="event-item">
+            <div class="event-date"><span class="event-day">25</span><span class="event-month">Jun</span></div>
+            <div class="event-info"><strong>End of Year Concert</strong><span>6:00 PM · School Auditorium</span></div>
+          </div>
+          <div class="event-item">
+            <div class="event-date"><span class="event-day">30</span><span class="event-month">Jun</span></div>
+            <div class="event-info"><strong>Sixth Form Graduation Ceremony</strong><span>10:00 AM · Main Hall</span></div>
+          </div>
+          <div class="event-item">
+            <div class="event-date"><span class="event-day">08</span><span class="event-month">Sep</span></div>
+            <div class="event-info"><strong>New Academic Year Begins</strong><span>All year groups</span></div>
+          </div>
+        </div>
+        <a href="news.html" class="btn btn-outline btn-full">Full Calendar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">What Families Say</span>
+      <h2 class="section-title">Voices from Our Community</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"Al-Miftah has been transformational for our daughter. The teachers genuinely care, the facilities are outstanding, and the community made us feel at home from day one."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><i class="fas fa-user"></i></div>
+          <div><strong>Mrs. Fatuma Ahmed</strong><span>Parent of Year 10 Student</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"The Sixth Form team helped our son secure a place at a top UK university. The academic support and UCAS guidance were absolutely invaluable."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><i class="fas fa-user"></i></div>
+          <div><strong>Mr. Hassan Mwangi</strong><span>Parent of Sixth Form Student</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p>"My children have blossomed at Al-Miftah. They're confident, curious, and happy. As a parent, that is everything I could ask for from a school."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><i class="fas fa-user"></i></div>
+          <div><strong>Dr. Amina Salim</strong><span>Parent of Primary &amp; Secondary Students</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCREDITATIONS -->
+<section class="section accreditations-bg">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Accreditations</span>
+      <h2 class="section-title">Internationally Recognised &amp; Accredited</h2>
+    </div>
+    <div class="accred-grid">
+      <div class="accred-item"><i class="fas fa-certificate accred-icon"></i><span>Cambridge International</span></div>
+      <div class="accred-item"><i class="fas fa-certificate accred-icon"></i><span>Pearson Edexcel</span></div>
+      <div class="accred-item"><i class="fas fa-certificate accred-icon"></i><span>Council of International Schools</span></div>
+      <div class="accred-item"><i class="fas fa-certificate accred-icon"></i><span>BTEC Qualification</span></div>
+      <div class="accred-item"><i class="fas fa-certificate accred-icon"></i><span>UCAS Partner School</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-footer">
+          <img src="images/logo.jpeg" alt="Al-Miftah School" class="logo-img" />
+          <div class="logo-text">
+            <span class="logo-name">Al-Miftah School</span>
+            <span class="logo-tagline">Nursery, Primary &amp; Secondary School</span>
+          </div>
+        </a>
+        <p>A world-class school serving students from Nursery through Sixth Form. Inspiring excellence, building character, shaping futures.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="schools.html">Our Schools</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Our Schools</h4>
+        <ul>
+          <li><a href="schools.html#early-years">Early Years / Nursery</a></li>
+          <li><a href="schools.html#primary">Primary School</a></li>
+          <li><a href="schools.html#secondary">Secondary School</a></li>
+          <li><a href="schools.html#sixth-form">Sixth Form</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 123 School Road, Dar es Salaam, Tanzania</p>
+        <p><i class="fas fa-phone"></i> +255 000 000 000</p>
+        <p><i class="fas fa-envelope"></i> info@almiftah.ac</p>
+        <div class="footer-term">
+          <h5>Current Term</h5>
+          <p>Summer Term 2026<br>Ends: 28 June 2026</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; 2026 Al-Miftah School. All Rights Reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Safeguarding</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/255000000000" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tooltip">Chat with us on WhatsApp</span>
+</a>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/script.js"></script>
+</body>
+</html>

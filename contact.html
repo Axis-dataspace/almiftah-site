@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Al-Miftah School</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-left">
+      <a href="mailto:info@almiftah.ac"><i class="fas fa-envelope"></i> info@almiftah.ac</a>
+      <a href="tel:+255000000000"><i class="fas fa-phone"></i> +255 000 000 000</a>
+    </div>
+    <div class="topbar-right">
+      <a href="#" class="topbar-link">Parent Portal</a>
+      <a href="#" class="topbar-link">Staff Login</a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <img src="images/logo.jpeg" alt="Al-Miftah School" class="logo-img" />
+      <div class="logo-text">
+        <span class="logo-name">Al-Miftah School</span>
+        <span class="logo-tagline">Nursery, Primary &amp; Secondary School</span>
+      </div>
+    </a>
+    <nav class="nav" id="nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="has-dropdown">
+          <a href="about.html" class="nav-link">About Us <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="about.html#story">Our Story</a></li>
+            <li><a href="about.html#vision">Vision &amp; Mission</a></li>
+            <li><a href="about.html#leadership">Leadership</a></li>
+            <li><a href="about.html#accreditations">Accreditations</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="schools.html" class="nav-link">Our Schools <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="schools.html#early-years">Early Years</a></li>
+            <li><a href="schools.html#primary">Primary School</a></li>
+            <li><a href="schools.html#secondary">Secondary School</a></li>
+            <li><a href="schools.html#sixth-form">Sixth Form</a></li>
+          </ul>
+        </li>
+        <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+        <li><a href="news.html" class="nav-link">News &amp; Events</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="admissions.html" class="btn btn-primary nav-cta">Apply Now</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Contact Us</span>
+    </div>
+    <h1>Get in Touch</h1>
+    <p>We'd love to hear from you. Our team is available Monday–Friday, 7:30 AM – 5:00 PM.</p>
+  </div>
+</div>
+
+<!-- CONTACT DETAILS STRIP -->
+<div style="background:var(--pale-blue);padding:40px 0;border-bottom:1px solid var(--light-blue)">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div><strong style="display:block;color:var(--dark-blue);font-size:.85rem">Address</strong><span style="font-size:.875rem;color:var(--gray-500)">123 School Road, Dar es Salaam, Tanzania</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+        <div><strong style="display:block;color:var(--dark-blue);font-size:.85rem">Phone</strong><span style="font-size:.875rem;color:var(--gray-500)">+255 000 000 000</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+        <div><strong style="display:block;color:var(--dark-blue);font-size:.85rem">Email</strong><span style="font-size:.875rem;color:var(--gray-500)">info@almiftah.ac</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px">
+        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+        <div><strong style="display:block;color:var(--dark-blue);font-size:.85rem">Office Hours</strong><span style="font-size:.875rem;color:var(--gray-500)">Mon–Fri: 7:30 AM – 5:00 PM</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT FORM + MAP -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- LEFT: info + map -->
+      <div class="contact-info">
+        <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);margin-bottom:20px">
+          <h3 style="color:var(--dark-blue);margin-bottom:18px">Admissions Office</h3>
+          <div class="contact-detail" style="box-shadow:none;padding:0;margin-bottom:12px">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div><strong>Admissions Email</strong><span>admissions@almiftah.ac</span></div>
+          </div>
+          <div class="contact-detail" style="box-shadow:none;padding:0;margin-bottom:12px">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div><strong>Admissions Line</strong><span>+255 000 000 001</span></div>
+          </div>
+          <a href="admissions.html" class="btn btn-primary btn-full" style="margin-top:8px">Apply Online <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div style="background:var(--white);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);margin-bottom:20px">
+          <h3 style="color:var(--dark-blue);margin-bottom:18px">Specialist Contacts</h3>
+          <div class="contact-detail" style="box-shadow:none;padding:0;margin-bottom:12px">
+            <div class="contact-icon" style="background:var(--light-blue)"><i class="fas fa-user-tie"></i></div>
+            <div><strong>Head's Office</strong><span>headteacher@almiftah.ac</span></div>
+          </div>
+          <div class="contact-detail" style="box-shadow:none;padding:0;margin-bottom:12px">
+            <div class="contact-icon" style="background:var(--light-blue)"><i class="fas fa-book"></i></div>
+            <div><strong>Examinations Office</strong><span>exams@almiftah.ac</span></div>
+          </div>
+          <div class="contact-detail" style="box-shadow:none;padding:0">
+            <div class="contact-icon" style="background:var(--light-blue)"><i class="fas fa-hands-helping"></i></div>
+            <div><strong>Pastoral / Welfare</strong><span>pastoral@almiftah.ac</span></div>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="img-placeholder contact-map" style="min-height:240px;border-radius:var(--radius-lg)">
+          <i class="fas fa-map-marked-alt"></i>
+          <span>Google Map — 123 School Road, Dar es Salaam</span>
+          <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:8px;font-size:.82rem">Open in Google Maps</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: contact form -->
+      <form class="contact-form" id="contactForm">
+        <h3 style="color:var(--dark-blue);margin-bottom:24px">Send Us a Message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Your first name" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Your last name" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+255 000 000 000" />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="">Select a topic…</option>
+            <option>Admissions Enquiry</option>
+            <option>Early Years / Nursery</option>
+            <option>Primary School</option>
+            <option>Secondary School</option>
+            <option>Sixth Form</option>
+            <option>Book a Campus Visit</option>
+            <option>Fee Enquiry</option>
+            <option>Safeguarding Concern</option>
+            <option>General Enquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help you…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full btn-lg">Send Message <i class="fas fa-paper-plane"></i></button>
+        <p class="form-note"><i class="fas fa-lock"></i> Your information is kept strictly confidential. We typically respond within one business day.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT US CTA -->
+<section style="background:linear-gradient(135deg, var(--dark-blue) 0%, var(--blue) 100%);padding:64px 0;text-align:center">
+  <div class="container">
+    <h2 style="color:var(--white);margin-bottom:12px">Come and See Us in Person</h2>
+    <p style="color:rgba(255,255,255,.8);margin-bottom:32px;font-size:1.05rem">We run Open Days throughout the year. Our next Open Day is <strong style="color:var(--light-blue)">Saturday 20 June 2026, 9:00 AM – 1:00 PM</strong>.</p>
+    <a href="admissions.html#apply-form" class="btn btn-white btn-lg">Register for Open Day</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-main">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-footer">
+          <img src="images/logo.jpeg" alt="Al-Miftah School" class="logo-img" />
+          <div class="logo-text"><span class="logo-name">Al-Miftah School</span><span class="logo-tagline">Nursery, Primary &amp; Secondary School</span></div>
+        </a>
+        <p>A world-class school serving students from Nursery through Sixth Form. Inspiring excellence, building character, shaping futures.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="schools.html">Our Schools</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Our Schools</h4>
+        <ul>
+          <li><a href="schools.html#early-years">Early Years / Nursery</a></li>
+          <li><a href="schools.html#primary">Primary School</a></li>
+          <li><a href="schools.html#secondary">Secondary School</a></li>
+          <li><a href="schools.html#sixth-form">Sixth Form</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 123 School Road, Dar es Salaam, Tanzania</p>
+        <p><i class="fas fa-phone"></i> +255 000 000 000</p>
+        <p><i class="fas fa-envelope"></i> info@almiftah.ac</p>
+        <div class="footer-term"><h5>Current Term</h5><p>Summer Term 2026<br>Ends: 28 June 2026</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; 2026 Al-Miftah School. All Rights Reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Safeguarding</a></div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/255000000000" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tooltip">Chat with us on WhatsApp</span>
+</a>
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<script src="js/script.js"></script>
+</body>
+</html>
