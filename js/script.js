@@ -2,6 +2,17 @@
 // AL-MIFTAH SCHOOL — Shared JavaScript (all pages)
 // ============================================================
 
+// === SCROLL PROGRESS BAR ===
+(function () {
+  const bar = document.getElementById('scrollProgress');
+  if (!bar) return;
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.body.scrollHeight - window.innerHeight;
+    bar.style.width = (total > 0 ? (scrolled / total) * 100 : 0) + '%';
+  }, { passive: true });
+})();
+
 // === STICKY HEADER ===
 (function () {
   const header = document.getElementById('header');

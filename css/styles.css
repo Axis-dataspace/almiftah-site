@@ -3,6 +3,18 @@
    Colors: Dark Blue #0D3572 | Blue #1565C0 | Light Blue #D6E8F7 | White #FFFFFF
    ============================================================ */
 
+/* === SCROLL PROGRESS BAR === */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(to right, var(--blue), var(--light-blue));
+  z-index: 9999;
+  transition: width .1s linear;
+}
+
 /* === RESET & BASE === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
