@@ -74,9 +74,10 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-slides">
-    <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=1920&q=80')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1920&q=80')"></div>
-    <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1532094349884-543559059013?w=1920&q=80')"></div>
+    <div class="hero-slide active" style="background-image:url('images/early-years.png')"></div>
+    <div class="hero-slide" style="background-image:url('images/primary-school.png')"></div>
+    <div class="hero-slide" style="background-image:url('images/secondary-school.png')"></div>
+    <div class="hero-slide" style="background-image:url('images/sixth-form.png')"></div>
   </div>
   <div class="hero-overlay"></div>
 
@@ -91,10 +92,23 @@
     </div>
   </div>
 
-  <div class="hero-nav">
-    <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
-    <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
-    <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+  <div class="hero-labels">
+    <button class="hero-label active" data-slide="0">
+      <span class="label-text">Early Years</span>
+      <span class="label-line"></span>
+    </button>
+    <button class="hero-label" data-slide="1">
+      <span class="label-text">Primary School</span>
+      <span class="label-line"></span>
+    </button>
+    <button class="hero-label" data-slide="2">
+      <span class="label-text">Secondary School</span>
+      <span class="label-line"></span>
+    </button>
+    <button class="hero-label" data-slide="3">
+      <span class="label-text">Sixth Form</span>
+      <span class="label-line"></span>
+    </button>
   </div>
   <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
   <button class="hero-arrow hero-next" id="heroNext" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
@@ -150,9 +164,8 @@
 <section class="section">
   <div class="container about-grid">
     <div class="about-image">
-      <div class="about-img-main img-placeholder">
-        <i class="fas fa-school"></i>
-        <span>Al-Miftah Campus</span>
+      <div class="about-img-main">
+        <img src="images/campus.png" alt="Al-Miftah Campus" style="width:100%;height:100%;object-fit:cover;" />
       </div>
       <div class="about-img-badge">
         <i class="fas fa-award"></i>
@@ -300,20 +313,31 @@
     <div class="news-layout">
       <div class="news-main">
         <div class="news-card featured">
-          <div class="news-img img-placeholder"><i class="fas fa-newspaper"></i><span>News Image</span></div>
+          <div class="news-thumb-grid" data-modal="achieveModal" role="button" tabindex="0" aria-label="View graduation photos">
+            <div class="thumb-cell"><img src="images/gallery-12.jpeg" alt="Graduation group photo" loading="lazy" /></div>
+            <div class="thumb-cell"><img src="images/gallery-02.jpeg" alt="Graduates in gowns" loading="lazy" /></div>
+            <div class="thumb-cell"><img src="images/gallery-13.jpeg" alt="Graduation parade" loading="lazy" /></div>
+            <div class="thumb-cell thumb-last">
+              <img src="images/gallery-10.jpeg" alt="Grade 7 graduates" loading="lazy" />
+              <div class="thumb-last-overlay">+8 more</div>
+            </div>
+          </div>
           <div class="news-body">
             <span class="news-tag">Achievement</span>
             <h3>Al-Miftah Students Excel in Cambridge IGCSE Examinations</h3>
             <p>We are proud to announce outstanding results across all subject areas, with 85% of students achieving A*–C grades — our best results in school history.</p>
             <div class="news-meta">
               <span><i class="fas fa-calendar"></i> June 10, 2026</span>
-              <a href="news.html" class="news-more">Read More <i class="fas fa-arrow-right"></i></a>
+              <a href="#" class="news-more" data-modal="achieveModal">View Photos <i class="fas fa-images"></i></a>
             </div>
           </div>
         </div>
         <div class="news-row">
-          <div class="news-card small">
-            <div class="news-img-sm img-placeholder"><i class="fas fa-futbol"></i></div>
+          <div class="news-card small news-card-clickable" data-modal="sportsModal" role="button" tabindex="0" aria-label="View sports photos">
+            <div class="news-img-sm" style="position:relative;min-height:120px;overflow:hidden;">
+              <img src="images/gallery-18.jpeg" alt="Sports day activity" style="width:100%;height:120px;object-fit:cover;display:block;" loading="lazy" />
+              <div class="thumb-view-all"><i class="fas fa-images"></i> View All 6 Photos</div>
+            </div>
             <div class="news-body-sm">
               <span class="news-tag">Sports</span>
               <h4>Inter-School Football Championship Victory</h4>
@@ -321,7 +345,9 @@
             </div>
           </div>
           <div class="news-card small">
-            <div class="news-img-sm img-placeholder"><i class="fas fa-paint-brush"></i></div>
+            <div class="news-img-sm" style="min-height:120px;overflow:hidden;">
+              <img src="images/news-arts.jpeg" alt="Annual Art Exhibition" style="width:100%;height:120px;object-fit:cover;display:block;" />
+            </div>
             <div class="news-body-sm">
               <span class="news-tag">Arts</span>
               <h4>Annual Art Exhibition Opens to the Community</h4>
@@ -480,6 +506,52 @@
   <span class="wa-tooltip">Chat with us on WhatsApp</span>
 </a>
 <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<!-- ACHIEVEMENT GALLERY MODAL -->
+<div class="gallery-modal" id="achieveModal" role="dialog" aria-modal="true" aria-label="Graduation photos">
+  <div class="modal-inner">
+    <div class="modal-header">
+      <h3><i class="fas fa-graduation-cap"></i> Class of 2025 — Graduation Ceremony</h3>
+      <button class="modal-close" aria-label="Close gallery"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-grid">
+        <img src="images/gallery-12.jpeg" alt="Group photo with certificates" loading="lazy" />
+        <img src="images/gallery-02.jpeg" alt="Graduates in gowns" loading="lazy" />
+        <img src="images/gallery-10.jpeg" alt="Grade 7 graduates" loading="lazy" />
+        <img src="images/gallery-13.jpeg" alt="Graduation parade" loading="lazy" />
+        <img src="images/gallery-04.jpeg" alt="Ceremony speaker" loading="lazy" />
+        <img src="images/gallery-11.jpeg" alt="Award presentation" loading="lazy" />
+        <img src="images/gallery-01.jpeg" alt="Student performance" loading="lazy" />
+        <img src="images/gallery-05.jpeg" alt="Students on stage" loading="lazy" />
+        <img src="images/gallery-03.jpeg" alt="Student speech" loading="lazy" />
+        <img src="images/gallery-08.jpeg" alt="Cultural performance" loading="lazy" />
+        <img src="images/gallery-09.jpeg" alt="Choir performance" loading="lazy" />
+        <img src="images/gallery-17.jpeg" alt="Primary students" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SPORTS GALLERY MODAL -->
+<div class="gallery-modal" id="sportsModal" role="dialog" aria-modal="true" aria-label="Sports photos">
+  <div class="modal-inner">
+    <div class="modal-header">
+      <h3><i class="fas fa-running"></i> Sports &amp; Co-Curricular Activities</h3>
+      <button class="modal-close" aria-label="Close gallery"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-grid">
+        <img src="images/gallery-18.jpeg" alt="Sports day activity" loading="lazy" />
+        <img src="images/gallery-07.jpeg" alt="School activity" loading="lazy" />
+        <img src="images/gallery-06.jpeg" alt="School community" loading="lazy" />
+        <img src="images/gallery-14.jpeg" alt="Learning activity" loading="lazy" />
+        <img src="images/gallery-15.jpeg" alt="Student performance" loading="lazy" />
+        <img src="images/gallery-16.jpeg" alt="Stage performance" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="js/script.js"></script>
 </body>
 </html>

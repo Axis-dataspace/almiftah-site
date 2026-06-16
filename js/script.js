@@ -53,7 +53,7 @@
 // === HERO SLIDER (home page only) ===
 (function () {
   const slides = document.querySelectorAll('.hero-slide');
-  const dots = document.querySelectorAll('.hero-dot');
+  const labels = document.querySelectorAll('.hero-label');
   const prevBtn = document.getElementById('heroPrev');
   const nextBtn = document.getElementById('heroNext');
   if (!slides.length) return;
@@ -63,10 +63,10 @@
 
   function goTo(index) {
     slides[current].classList.remove('active');
-    dots[current] && dots[current].classList.remove('active');
+    labels[current] && labels[current].classList.remove('active');
     current = (index + slides.length) % slides.length;
     slides[current].classList.add('active');
-    dots[current] && dots[current].classList.add('active');
+    labels[current] && labels[current].classList.add('active');
   }
 
   function next() { goTo(current + 1); }
@@ -75,7 +75,7 @@
 
   nextBtn && nextBtn.addEventListener('click', () => { next(); startTimer(); });
   prevBtn && prevBtn.addEventListener('click', () => { prev(); startTimer(); });
-  dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); startTimer(); }));
+  labels.forEach((label, i) => label.addEventListener('click', () => { goTo(i); startTimer(); }));
 
   startTimer();
 })();
@@ -164,6 +164,44 @@
       btn.style.background = '';
       form.reset();
     }, 4000);
+  });
+})();
+
+// === GALLERY MODALS ===
+(function () {
+  function openModal(id) {
+    const m = document.getElementById(id);
+    if (!m) return;
+    m.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(m) {
+    m.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('[data-modal]').forEach(el => {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      openModal(this.dataset.modal);
+    });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(this.dataset.modal); }
+    });
+  });
+
+  document.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', function () { closeModal(this.closest('.gallery-modal')); });
+  });
+
+  document.querySelectorAll('.gallery-modal').forEach(m => {
+    m.addEventListener('click', function (e) { if (e.target === this) closeModal(this); });
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.gallery-modal.open').forEach(m => closeModal(m));
+    }
   });
 })();
 

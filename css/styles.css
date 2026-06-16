@@ -356,25 +356,49 @@ h3 { font-size: 1.2rem; font-weight: 600; }
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
-.hero-nav {
+
+.hero-labels {
   position: absolute;
-  bottom: 32px;
+  bottom: 36px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 10px;
+  gap: 40px;
   z-index: 3;
+  white-space: nowrap;
 }
-.hero-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.4);
+.hero-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  background: none;
   border: none;
-  transition: all var(--transition);
   cursor: pointer;
+  padding: 0;
+  color: rgba(255,255,255,.38);
+  font-family: 'Inter', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  transition: color .45s ease, opacity .45s ease;
 }
-.hero-dot.active { background: var(--white); width: 28px; border-radius: 5px; }
+.hero-label.active {
+  color: var(--white);
+}
+.label-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(255,255,255,.15);
+  transition: background .45s ease;
+}
+.hero-label.active .label-line {
+  background: var(--light-blue);
+  box-shadow: 0 0 8px rgba(214,232,247,.6);
+}
 
 .hero-arrow {
   position: absolute;
@@ -819,7 +843,7 @@ h3 { font-size: 1.2rem; font-weight: 600; }
 .footer-brand p { font-size: .9rem; line-height: 1.7; margin-top: 16px; margin-bottom: 24px; }
 .logo-footer .logo-name { color: var(--white); }
 .logo-footer .logo-tagline { color: rgba(255,255,255,.5); }
-.logo-footer .logo-img { filter: brightness(0) invert(1); opacity: .9; }
+.logo-footer .logo-img { opacity: 1; }
 
 .footer-social { display: flex; gap: 10px; }
 .footer-social a {
@@ -949,6 +973,148 @@ h3 { font-size: 1.2rem; font-weight: 600; }
 .back-to-top:hover { background: var(--blue); transform: translateY(-4px); }
 
 /* ============================================================
+   NEWS CARD — 4-THUMB MOSAIC (Achievement)
+   ============================================================ */
+.news-thumb-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 140px 140px;
+  gap: 3px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.thumb-cell {
+  overflow: hidden;
+  position: relative;
+}
+.thumb-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  filter: contrast(1.04) saturate(1.08) brightness(1.02);
+}
+.news-thumb-grid:hover .thumb-cell img { transform: scale(1.05); }
+
+.thumb-last { position: relative; overflow: hidden; }
+.thumb-last-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13,53,114,.62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: .02em;
+}
+
+/* Sports card single-photo overlay */
+.thumb-view-all {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(13,53,114,.72);
+  color: var(--white);
+  font-size: .75rem;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  letter-spacing: .04em;
+}
+
+.news-card-clickable { cursor: pointer; }
+.news-card-clickable:hover { box-shadow: var(--shadow-md); }
+
+/* ============================================================
+   GALLERY MODALS
+   ============================================================ */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.88);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 16px 40px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s ease, visibility .3s ease;
+}
+.gallery-modal.open { opacity: 1; visibility: visible; }
+
+.modal-inner {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 920px;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,.5);
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background: var(--dark-blue);
+}
+.modal-header h3 {
+  color: var(--white);
+  font-size: .95rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+.modal-header h3 i { color: var(--light-blue); }
+.modal-close {
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: .95rem;
+  cursor: pointer;
+  border: none;
+  flex-shrink: 0;
+  transition: background .2s ease;
+}
+.modal-close:hover { background: rgba(255,255,255,.3); }
+
+.modal-body { padding: 14px; }
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.modal-grid img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  filter: contrast(1.04) saturate(1.08) brightness(1.02);
+  transition: transform .3s ease;
+  cursor: zoom-in;
+}
+.modal-grid img:hover { transform: scale(1.03); }
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1100px) {
@@ -956,6 +1122,10 @@ h3 { font-size: 1.2rem; font-weight: 600; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .leadership-grid { grid-template-columns: repeat(2, 1fr); }
   .news-full-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .modal-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 900px) {
@@ -1016,6 +1186,10 @@ h3 { font-size: 1.2rem; font-weight: 600; }
   .hero-content { padding: 60px 0; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { justify-content: center; }
+  .hero-labels { gap: 16px; bottom: 20px; }
+  .hero-label { font-size: .62rem; letter-spacing: .06em; }
+  .modal-grid { grid-template-columns: 1fr 1fr; }
+  .news-thumb-grid { grid-template-rows: 110px 110px; }
   .quick-actions-grid { grid-template-columns: 1fr; }
   .schools-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
